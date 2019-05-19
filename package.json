@@ -1,0 +1,25 @@
+{
+  "name": "koawxapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peigenzi/koawxapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peigenzi/koawxapi/issues"
+  },
+  "homepage": "https://github.com/peigenzi/koawxapi#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "require-directory": "^2.1.1"
+  }
+}
