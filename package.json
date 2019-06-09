@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/peigenzi/koawxapi#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.11",
+    "mysql2": "^1.6.5",
     "require-directory": "^2.1.1",
+    "sequelize": "^5.8.7",
     "validator": "^11.0.0"
   }
 }

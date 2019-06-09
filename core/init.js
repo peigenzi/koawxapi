@@ -6,12 +6,18 @@ class InitManager {
     InitManager.app = app;
     InitManager.initLoadRouters();
     InitManager.loadConfig();
+    InitManager.loadHttpException();
   }
 
   static loadConfig(path = '') {
     const configPath = path || process.cwd() + '/config/config.js';
     const config = require(configPath);
     global.config = config;
+  }
+
+  static loadHttpException() {
+    const errors = require('./http-exception');
+    global.errs = errors;
   }
 
   static initLoadRouters() {
