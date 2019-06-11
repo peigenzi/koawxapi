@@ -1,3 +1,5 @@
+const jwt = require('jsonwebtoken');
+
 const findMembers = function(instance, { prefix, specifiedType, filter }) {
   // 递归函数
   function _find(instance) {
@@ -26,7 +28,18 @@ const findMembers = function(instance, { prefix, specifiedType, filter }) {
   return _find(instance);
 };
 
+/**
+ * @desc 生成jwt
+ * @param {*} uid 
+ * @param {*} scope 做权限
+ */
+const generateToken = function(uid, scope) {
+  const { secretKey, expiresIn } = global.config.security;
+
+  return jwt.sign({ uid, scope }, secretKey, { expiresIn });
+};
+
 module.exports = {
-  findMembers
-  // generateToken,
+  findMembers,
+  generateToken
 };
